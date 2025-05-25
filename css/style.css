@@ -1,0 +1,93 @@
+
+body {
+    font-family: "Graphik", sans-serif;
+     display: flex; 
+     flex-direction: column;
+      min-height: 100vh; 
+      margin: 0;
+      color: aliceblue;
+      background-color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusts spacing */
+    padding: 10px 20px;
+}
+h2 ,a{
+  text-decoration: none;
+  color: inherit;
+  
+}
+h2 a:hover{
+  text-decoration: underline;
+  color: lightblue;
+}
+
+nav {
+    display: flex;
+    gap: 15px; /* Space between links */
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(255, 249, 249);
+    font-weight: bold;
+}
+
+.float_right{
+    float: right;
+}
+
+.container{
+  display: inline-block;
+}
+
+/* .hero_text{
+  margin-left: 1.5rem;
+  font-size: 5em;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+  typing 2s steps(33),
+  cursor .4s step-end infinite alternate;
+} */
+.fblogo:hover {
+  background-color: #1877F2;
+}
+
+
+/* cursor blinking */
+@keyframes cursor{
+  50%{ border-color: transparent;}
+}
+
+/* typing effect */
+@keyframes typing{
+  from{width: 0;}
+}
+/* socialmedia container */
+
+
+footer{
+  background-color: lightsteelblue;
+}
+nav a:hover{
+  text-decoration: underline;
+  color: lightblue;
+  opacity: 0.85;
+}
+.float_right:hover{
+  transform: translate(0,5px);
+  box-shadow: 0 5px 5px red;
+  opacity: 0.85;
+}
+
+nav a:hover{
+  opacity: 0.85;
+}

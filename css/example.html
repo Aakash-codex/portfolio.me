@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Effect</title>
+  <style>
+    .hero_text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24px;
+      white-space: pre-line;
+      color: white;
+    }
+
+    body {
+      background-color: #222;
+      padding: 50px;
+    }
+
+    .typing {
+      border-right: 2px solid lightskyblue;
+      animation: blink 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: lightskyblue; }
+    }
+  </style>
+</head>
+<body>
+
+<p class="hero_text" id="typedText"></p>
+
+<script>
+  const text = "Hi,\nI am Aakash\nFrontend developer";
+  const target = document.getElementById("typedText");
+  let index = 0;
+
+  function typeLetterByLetter() {
+    if (index < text.length) {
+      target.innerHTML = `<span class="typing">${text.slice(0, index + 1)}</span>`;
+      index++;
+      setTimeout(typeLetterByLetter, 100); // adjust speed here
+    } else {
+      target.innerHTML = text; // remove cursor after done
+    }
+  }
+
+  typeLetterByLetter();
+</script>
+
+</body>
+</html>
